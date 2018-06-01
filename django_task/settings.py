@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'task_app',
+    'rest_framework',
     'rest_framework_swagger',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -106,3 +107,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
