@@ -3,42 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>Add patient - ajax</title>
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .main_form {
+            margin: auto;
+            margin-top: 120px;
+            width: 100%;
+            padding: 50px;
+            border-color: black;
+            border-style: solid;
+        }
+
+        .errornote {
+            margin: auto;
+            margin-top: 10px;
+            width:100%;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="errornote">
+            <span id="note"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 main_form rounded-top">
+            <form method='post' action="" enctype="multipart/form-data"> {% csrf_token %}
+                {{ form.as_p }}
+                <button type='submit' id="submit_btn" class="btn btn-primary">Add patient</button>
+            </form>
+        </div>
+    </div>
+</div>
 
-
-<form method='post' action="" enctype="multipart/form-data"> {% csrf_token %}
-    {{ form.as_p }}
-    <button type='submit' id="submit_btn">save</button>
-</form>
-
+<!-- Bootstrap  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+<!-- jquery  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
     $(document).ready(function () {
-
         $('#submit_btn').on("click", function (event) {
             event.preventDefault();
-            var url = window.location + "api/patients/";
-
             var patient_name = $("#id_patient_name").val();
             var patient_number = $("#id_phone_number").val();
+            //some validation
+            if (patient_name == "") {
+                $("#note").html('<div class="alert alert-danger" role="alert">\n' +
+                    '  Name can not be empty\n' +
+                    '</div>');
 
-            $.ajax({
-                url: url,
-                method: "POST",
-                data: {patient_name: patient_name, phone_number: patient_number},
-                success: function (response) {
-                    console.log(response);
-                    $("#id_patient_name").val("");
-                    $("#id_phone_number").val("");
-                },
-                error: function (response, status, err) {
-                    console.log('something went wrong', status, err);
-                    console.log(response.responseJSON.phone_number[0]);
-                }
+            } else if (patient_number == "") {
+                $("#note").html('<div class="alert alert-danger" role="alert">\n' +
+                    '  Phone can not be empty\n' +
+                    '</div>');
+            } else {
+                var url = window.location + "api/patients/";
+                $.ajax({
+                    url: url,
+                    method: "POST",
+                    data: {patient_name: patient_name, phone_number: patient_number},
+                    success: function (response) {
+                        console.log(response);
+                        $("#id_patient_name").val("");
+                        $("#id_phone_number").val("");
+                        $("#note").html('<div class="alert alert-success" role="alert">\n' +
+                            '  Success :  the data stored \n' +
+                            '</div>');
+                    },
+                    error: function (response, status, err) {
+                        console.log('something went wrong', status, err);
+                        console.log(response.responseJSON.phone_number[0]);
+                        $("#note").html('<div class="alert alert-danger" role="alert">\n' +
+                            '  Error : ' + response.responseJSON.phone_number[0] + '\n' +
+                            '</div>');
+                    }
 
-            });
+                });
+
+            }
 
 
         });
