@@ -14,19 +14,19 @@ Test page contain Name, mobile and ok button <br/>
 
 <img src="Proof_of_concept_screenshots/screenshot1.png" />
 <br/>
-<img sre="Proof_of_concept_screenshots/separator.png" / >
+<img src="Proof_of_concept_screenshots/separator.png" / >
 <br/>
 <img src="Proof_of_concept_screenshots/screenshot2.png" />
 <br/>
-<img sre="Proof_of_concept_screenshots/separator.png" / >
+<img src="Proof_of_concept_screenshots/separator.png" / >
 <br/>
 <img src="Proof_of_concept_screenshots/screenshot3.png" />
 <br/>
-<img sre="Proof_of_concept_screenshots/separator.png" / >
+<img src="Proof_of_concept_screenshots/separator.png" / >
 <br/>
 <img src="Proof_of_concept_screenshots/screenshot4.png" />
 <br/>
-<img sre="Proof_of_concept_screenshots/separator.png" / >
+<img src="Proof_of_concept_screenshots/separator.png" / >
 <br/>
 # Proof of concept for Django REST framework
 ```  /task/api/ ```
