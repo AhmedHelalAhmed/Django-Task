@@ -10,8 +10,10 @@ visit_id => M2O , price <br/>
 Test page contain Name, mobile and ok button <br/>
 
 # Proof of concept for test page for
-<br/>
-```  /task ```
+
+```
+/task 
+```
 <br/>
 <img src="Proof_of_concept_screenshots/screenshot1.png" />
 <br/>
@@ -27,26 +29,29 @@ Test page contain Name, mobile and ok button <br/>
 <br/>
 <img src="Proof_of_concept_screenshots/screenshot4.png" />
 <br/>
-<center>
+
 <img src="Proof_of_concept_screenshots/separator.png" / >
-</center>
+
 
 # Proof of concept for Django REST framework for 
-<br/>
-```  /task/api/ ```
+
+```
+/task/api/ 
+```
 <br/>
 <img src="Proof_of_concept_screenshots/djangorestframework.png" />
 <br/>
-<center>
+
 <img src="Proof_of_concept_screenshots/separator.png" / >
-</center>
+
 
 # Proof of concept for swagger-ui for
-<br/>
-```  /task/swagger-ui ```
-<br/>
+
+```
+/task/swagger-ui 
+```
 <img src="Proof_of_concept_screenshots/swagger.png" />
 <br/>
-<center>
+
 <img src="Proof_of_concept_screenshots/separator.png" / >
-</center>
+
