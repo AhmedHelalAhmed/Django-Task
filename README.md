@@ -29,7 +29,6 @@ Test page contain Name, mobile and ok button <br/>
 <br/>
 <img src="Proof_of_concept_screenshots/screenshot4.png" />
 <br/>
-
 <img src="Proof_of_concept_screenshots/separator.png" / >
 
 
@@ -41,8 +40,8 @@ Test page contain Name, mobile and ok button <br/>
 <br/>
 <img src="Proof_of_concept_screenshots/djangorestframework.png" />
 <br/>
-
 <img src="Proof_of_concept_screenshots/separator.png" / >
+
 
 
 # Proof of concept for swagger-ui for
@@ -52,6 +51,6 @@ Test page contain Name, mobile and ok button <br/>
 ```
 <img src="Proof_of_concept_screenshots/swagger.png" />
 <br/>
-
 <img src="Proof_of_concept_screenshots/separator.png" / >
+
 
