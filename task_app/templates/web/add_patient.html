@@ -7,11 +7,43 @@
 <body>
 
 
-<form method='post' action="/task/api/patients/" enctype="multipart/form-data"> {% csrf_token %}
+<form method='post' action="" enctype="multipart/form-data"> {% csrf_token %}
     {{ form.as_p }}
-    <button type='submit'>save</button>
+    <button type='submit' id="submit_btn">save</button>
 </form>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<script>
+    $(document).ready(function () {
+
+        $('#submit_btn').on("click", function (event) {
+            event.preventDefault();
+            var url = window.location + "api/patients/";
+
+            var patient_name = $("#id_patient_name").val();
+            var patient_number = $("#id_phone_number").val();
+
+            $.ajax({
+                url: url,
+                method: "POST",
+                data: {patient_name: patient_name, phone_number: patient_number},
+                success: function (response) {
+                    console.log(response);
+                    $("#id_patient_name").val("");
+                    $("#id_phone_number").val("");
+                },
+                error: function (response, status, err) {
+                    console.log('something went wrong', status, err);
+                    console.log(response.responseJSON.phone_number[0]);
+                }
+
+            });
+
+
+        });
+
+    });
+</script>
 </body>
 </html>
