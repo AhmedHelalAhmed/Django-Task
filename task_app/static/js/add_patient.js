@@ -20,16 +20,14 @@ $(document).ready(function () {
                 method: "POST",
                 data: {patient_name: patient_name, phone_number: patient_number},
                 success: function (response) {
-                    console.log(response);
+
                     $("#id_patient_name").val("");
                     $("#id_phone_number").val("");
                     $("#note").html('<div class="alert alert-success" role="alert">\n' +
                         '  Success :  the data stored \n' +
                         '</div>');
                 },
-                error: function (response, status, err) {
-                    console.log('something went wrong', status, err);
-                    console.log(response.responseJSON.phone_number[0]);
+                error: function (response) {
                     $("#note").html('<div class="alert alert-danger" role="alert">\n' +
                         '  Error : ' + response.responseJSON.phone_number[0] + '\n' +
                         '</div>');

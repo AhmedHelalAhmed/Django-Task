@@ -18,6 +18,6 @@ class PatientForm(forms.ModelForm):
                 'placeholder': 'Patient name'
                 , 'class': 'form-control'}),
             'phone_number': forms.TextInput(attrs={
-                'placeholder': 'Patient phone number',
+                'placeholder': 'Patient Mobile',
                 'class': 'form-control'}),
         }
