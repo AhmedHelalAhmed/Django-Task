@@ -14,33 +14,42 @@ Test page contain Name, mobile and ok button <br/>
 ```
 /task 
 ```
-<br/>
-<img src="Proof_of_concept_screenshots/screenshot1.png" />
-<br/>
-<img src="Proof_of_concept_screenshots/separator.png" / >
-<br/>
-<img src="Proof_of_concept_screenshots/screenshot2.png" />
-<br/>
-<img src="Proof_of_concept_screenshots/separator.png" / >
-<br/>
-<img src="Proof_of_concept_screenshots/screenshot3.png" />
-<br/>
-<img src="Proof_of_concept_screenshots/separator.png" / >
-<br/>
-<img src="Proof_of_concept_screenshots/screenshot4.png" />
-<br/>
-<img src="Proof_of_concept_screenshots/separator.png" / >
-
+<p align="center">
+  `<img src="Proof_of_concept_screenshots/screenshot1.png" />
+</p>
+<p align="center">
+  <img src="Proof_of_concept_screenshots/separator.png" / >
+</p>
+<p align="center">
+  <img src="Proof_of_concept_screenshots/screenshot2.png" />
+</p>
+<p align="center">
+  <img src="Proof_of_concept_screenshots/separator.png" / >
+</p>
+<p align="center">
+  <img src="Proof_of_concept_screenshots/screenshot3.png" />
+</p>
+<p align="center">
+  <img src="Proof_of_concept_screenshots/separator.png" / >
+</p>
+<p align="center">
+  <img src="Proof_of_concept_screenshots/screenshot4.png" />
+</p>
+<p align="center">
+  <img src="Proof_of_concept_screenshots/separator.png" / >
+</p>
 
 # Proof of concept for Django REST framework for 
 
 ```
 /task/api/ 
 ```
-<br/>
-<img src="Proof_of_concept_screenshots/djangorestframework.png" />
-<br/>
-<img src="Proof_of_concept_screenshots/separator.png" / >
+<p align="center">
+  <img src="Proof_of_concept_screenshots/djangorestframework.png" />
+</p>
+<p align="center">
+  <img src="Proof_of_concept_screenshots/separator.png" / >
+</p>
 
 
 
@@ -49,8 +58,13 @@ Test page contain Name, mobile and ok button <br/>
 ```
 /task/swagger-ui 
 ```
-<img src="Proof_of_concept_screenshots/swagger.png" />
-<br/>
-<img src="Proof_of_concept_screenshots/separator.png" / >
+<p align="center">
+  <img src="Proof_of_concept_screenshots/swagger.png" />
+</p>
+ 
+<p align="center">
+  <img src="Proof_of_concept_screenshots/separator.png" / >
+</p>
+  
 
 
