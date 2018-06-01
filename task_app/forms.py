@@ -8,7 +8,7 @@ class PatientForm(forms.ModelForm):
 
         labels = {
             "patient_name": "Name",
-            "phone_number": "Phone"
+            "phone_number": "Mobile"
         }
 
         fields = ('patient_name', 'phone_number')

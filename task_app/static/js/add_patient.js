@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         } else if (patient_number == "") {
             $("#note").html('<div class="alert alert-danger" role="alert">\n' +
-                '  Phone can not be empty\n' +
+                '  Mobile can not be empty\n' +
                 '</div>');
         } else {
             var url = window.location + "api/patients/";
