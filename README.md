@@ -11,10 +11,10 @@ Test page contain Name, mobile and ok button <br/>
 
 # Proof of concept for test page for
 ```  /task ```
-<img src="Proof_of_concept_screenshots/screeshot1.png" />
-<img src="Proof_of_concept_screenshots/screeshot2.png" />
-<img src="Proof_of_concept_screenshots/screeshot3.png" />
-<img src="Proof_of_concept_screenshots/screeshot4.png" />
+<img src="Proof_of_concept_screenshots/screenshot1.png" />
+<img src="Proof_of_concept_screenshots/screenshot2.png" />
+<img src="Proof_of_concept_screenshots/screenshot3.png" />
+<img src="Proof_of_concept_screenshots/screenshot4.png" />
 
 # Proof of concept for Django REST framework
 ```  /task/api/ ```
