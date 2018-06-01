@@ -1,5 +1,6 @@
 from django.conf.urls import url, include
 from .models import Patient
+from . import views
 from rest_framework_swagger.views import get_swagger_view
 from rest_framework import routers, serializers, viewsets
 
@@ -26,7 +27,7 @@ router.register(r'patients', UserViewSet)
 
 
 urlpatterns = [
-    # url(r'^patient/new$', views.new_patient),
+    url(r'^$', views.addpatient),
     url(r'^swagger-ui$', schema_view),
     url(r'^api/', include(router.urls)),
 ]

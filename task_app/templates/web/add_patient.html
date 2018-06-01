@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add patient - ajax</title>
+</head>
+<body>
+
+
+<form method='post' action="/task/api/patients/" enctype="multipart/form-data"> {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'>save</button>
+</form>
+
+
+</body>
+</html>
