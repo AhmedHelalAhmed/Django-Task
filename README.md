@@ -11,15 +11,32 @@ Test page contain Name, mobile and ok button <br/>
 
 # Proof of concept for test page for
 ```  /task ```
-<img src="Proof_of_concept_screenshots/screenshot1.png" />
-<img src="Proof_of_concept_screenshots/screenshot2.png" />
-<img src="Proof_of_concept_screenshots/screenshot3.png" />
-<img src="Proof_of_concept_screenshots/screenshot4.png" />
 
+<img src="Proof_of_concept_screenshots/screenshot1.png" />
+<br/>
+<img sre="Proof_of_concept_screenshots/separator.png" / >
+<br/>
+<img src="Proof_of_concept_screenshots/screenshot2.png" />
+<br/>
+<img sre="Proof_of_concept_screenshots/separator.png" / >
+<br/>
+<img src="Proof_of_concept_screenshots/screenshot3.png" />
+<br/>
+<img sre="Proof_of_concept_screenshots/separator.png" / >
+<br/>
+<img src="Proof_of_concept_screenshots/screenshot4.png" />
+<br/>
+<img sre="Proof_of_concept_screenshots/separator.png" / >
+<br/>
 # Proof of concept for Django REST framework
 ```  /task/api/ ```
 <img src="Proof_of_concept_screenshots/djangorestframework.png" />
-
+<br/>
+<img sre="Proof_of_concept_screenshots/separator.png" / >
+<br/>
 # Proof of concept for swagger-ui
 ```  /task/swagger-ui ```
 <img src="Proof_of_concept_screenshots/swagger.png" />
+<br/>
+<img sre="Proof_of_concept_screenshots/separator.png" / >
+<br/>
