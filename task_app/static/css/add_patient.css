@@ -1,0 +1,15 @@
+
+.main_form {
+    margin: auto;
+    margin-top: 120px;
+    width: 100%;
+    padding: 50px;
+    border-color: black;
+    border-style: solid;
+}
+
+.errornote {
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+}

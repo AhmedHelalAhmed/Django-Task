@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,22 +10,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <style>
-        .main_form {
-            margin: auto;
-            margin-top: 120px;
-            width: 100%;
-            padding: 50px;
-            border-color: black;
-            border-style: solid;
-        }
+    <link rel="stylesheet" href="{% static 'css/add_patient.css' %}">
 
-        .errornote {
-            margin: auto;
-            margin-top: 10px;
-            width:100%;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -55,53 +42,6 @@
         crossorigin="anonymous"></script>
 <!-- jquery  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('#submit_btn').on("click", function (event) {
-            event.preventDefault();
-            var patient_name = $("#id_patient_name").val();
-            var patient_number = $("#id_phone_number").val();
-            //some validation
-            if (patient_name == "") {
-                $("#note").html('<div class="alert alert-danger" role="alert">\n' +
-                    '  Name can not be empty\n' +
-                    '</div>');
-
-            } else if (patient_number == "") {
-                $("#note").html('<div class="alert alert-danger" role="alert">\n' +
-                    '  Phone can not be empty\n' +
-                    '</div>');
-            } else {
-                var url = window.location + "api/patients/";
-                $.ajax({
-                    url: url,
-                    method: "POST",
-                    data: {patient_name: patient_name, phone_number: patient_number},
-                    success: function (response) {
-                        console.log(response);
-                        $("#id_patient_name").val("");
-                        $("#id_phone_number").val("");
-                        $("#note").html('<div class="alert alert-success" role="alert">\n' +
-                            '  Success :  the data stored \n' +
-                            '</div>');
-                    },
-                    error: function (response, status, err) {
-                        console.log('something went wrong', status, err);
-                        console.log(response.responseJSON.phone_number[0]);
-                        $("#note").html('<div class="alert alert-danger" role="alert">\n' +
-                            '  Error : ' + response.responseJSON.phone_number[0] + '\n' +
-                            '</div>');
-                    }
-
-                });
-
-            }
-
-
-        });
-
-    });
-</script>
+<script src="{% static 'js/add_patient.js' %}"></script>
 </body>
 </html>
